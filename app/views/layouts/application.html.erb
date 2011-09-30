@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Indonesian Bruin Student Association | <%= @title %></title>
-		<%= csrf_meta_tag %>
+	
+	<title>Indonesian Bruin Student Association | <%= @title %></title>
+	<%= csrf_meta_tag %>
+	<%= render 'layouts/stylesheets'%>
 	</head>
 	<body>
-		<%= yield%>
+		<div class = "container">
+		<%= render 'layouts/header'%>
+		
+				<% flash.each do |key, value| %>
+					<div class="flash <%= key %>"><%= value %></div>
+					<%end%>
+				<%= yield %>
+				</section>
+		
+		<%= debug(params) if Rails.env.development? %>
+			</div>
 	</body>
 </html>

@@ -1,14 +1,10 @@
 Ibsa::Application.routes.draw do
   
-  get "pages/tester"
-
-  get "pages/home"
-  
-  get "pages/about"
-  
-  get "pages/event"
-  
-  get "pages/contact"
+    root :to => "pages#home"
+    match '/contact', :to => 'pages#contact'
+     match '/about',   :to => 'pages#about'
+     match '/event',    :to => 'pages#event'
+     match '/home',  :to => 'pages#home'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
