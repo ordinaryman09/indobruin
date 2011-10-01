@@ -1573,6 +1573,7 @@ a.menu:after, .dropdown-toggle:after {
 }
 .tabs > li, .pills > li {
   float: left;
+ 
 }
 .tabs > li > a, .pills > li > a {
   display: block;
@@ -2359,4 +2360,17 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.logo {
+padding-top: 70px;	
+}
+
+.banner {
+	padding-top: 50px;	
+}
+
+.content {
+	font-size: 110%;
+	padding-top: 20px;
 }
