@@ -2377,6 +2377,8 @@ padding-top: 70px;
 }
 
 .ifoot {
+	padding-top : 50px;
+	padding-bottom : 30px;
 	width: 640px;
 	
 	margin-left: auto;
