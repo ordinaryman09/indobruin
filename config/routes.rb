@@ -5,6 +5,7 @@ Ibsa::Application.routes.draw do
      match '/about',   :to => 'pages#about'
      match '/event',    :to => 'pages#event'
      match '/home',  :to => 'pages#home'
+     match '/gallery', :to => 'pages#gallery'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

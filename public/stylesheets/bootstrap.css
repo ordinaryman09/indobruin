@@ -192,7 +192,8 @@ body {
   color: #404040;
 }
 .container {
-  width: 940px;
+  width: 640px;
+
   margin-left: auto;
   margin-right: auto;
   zoom: 1;
@@ -2373,4 +2374,11 @@ padding-top: 70px;
 .content {
 	font-size: 110%;
 	padding-top: 20px;
+}
+
+.ifoot {
+	width: 640px;
+	
+	margin-left: auto;
+	margin-right: auto;
 }
