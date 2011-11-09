@@ -193,7 +193,7 @@ body {
 }
 .container {
   width: 640px;
-
+	
   margin-left: auto;
   margin-right: auto;
   zoom: 1;
@@ -1227,6 +1227,8 @@ table .headerSortUp.purple, table .headerSortDown.purple {
  * Repeatable UI elements outside the base styles provided from the scaffolding
  * ---------------------------------------------------------------------------- */
 .topbar {
+	background-color:yellow;
+	font-size:150%;
   height: 40px;
   position: fixed;
   top: 0;
