@@ -1,43 +1,33 @@
 <header>
   
-	<div class="topbar">
-		<div class="fill">
-			<div class="container">
-		          
-		          <ul class="pills">
-		           		
-					<li><%= link_to "Home", root_path %></li>
-					<li><%= link_to "About", about_path %></li>
-				 	<li><%= link_to "Event", event_path %></li>
-					<li><%= link_to "Contact", contact_path %></li>
-					<li><%= link_to "Gallery", gallery_path %></li>
-		          </ul>
-			</div>
+	<div class="navbar">
+		<div class="ilogo">
+				
+				<%= image_tag("logo.png", :alt => "Logo", :width=>"79px") %>
+				
+				
 		</div>
-	</div>
-	
-	<div class="container">
 
-      <div class="logo">
-		<div class="row">
-			<div class="span3">
-			<%= image_tag("logo.png", :alt => "Logo", :class => "round") %>
-			</div>
-			<div class="span6">
-				<div class="banner"><h1>Indonesian Bruin Student Association</h1>
-					<iframe src="http://www.facebook.com/plugins/like.php?href=www.indobruin.com"
-					        scrolling="no" frameborder="0"
-					        style="border:none; width:450px; height:80px"></iframe>
-					</div>
-			</div>
-		</div>
-      </div>
-     
-	
 		
-      
-	</div>
+		<div class="itext">
+		<b>Indonesian &nbsp Bruin Student &nbsp Association</b>
+		</div>
+		
+		<div class="ilinks">
+			<ul>		
+				
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "Officer", event_path %></li>
+				<li><%= link_to "Contact", contact_path %></li>
+				<li><%= link_to "Gallery", gallery_path %></li>
+				
+			</ul>
+	 </div>
 	
-	 
+		<div class="ibruin">
 
+		<%= image_tag("bruin_logo.png", :alt => "Logo", :width=>"110px") %>
+
+		</div>
 </header>

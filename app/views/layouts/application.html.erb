@@ -5,26 +5,86 @@
 	<title>Indonesian Bruin Student Association | <%= @title %></title>
 	<%= csrf_meta_tag %>
 	<%= render 'layouts/stylesheets'%>
+	<!-- include CSS always before including js -->
+	<%= stylesheet_link_tag 'tn3' , :media => 'screen' %>
+	<!-- include jQuery library -->
+	<%= javascript_include_tag "jquery.min" %>
+	<!-- include tn3 plugin -->
+	<%= javascript_include_tag "jquery.tn3lite.min" %>
+	<!-- include slides plugin -->
+	<%= javascript_include_tag "slides.min.jquery" %>
+	
 	<!-- Envolve Chat -->
 	<script type="text/javascript">
+	
 	var envoSn=35407;
 	var envProtoType = (("https:" == document.location.protocol) ? "https://" : "http://");
 	document.write(unescape("%3Cscript src='" + envProtoType + "d.envolve.com/env.nocache.js' type='text/javascript'%3E%3C/script%3E"));
+
+	
+	$(function(){
+				$('#slides').slides({
+					preload: true,
+					preloadImage: '/images/loading.gif',
+					play: 5000,
+					pause: 2500,
+					hoverPause: true,
+					animationStart: function(current){
+						$('.caption').animate({
+							bottom:-35
+						},100);
+						if (window.console && console.log) {
+							// example return of current slide number
+							console.log('animationStart on slide: ', current);
+						};
+					},
+					animationComplete: function(current){
+						$('.caption').animate({
+							bottom:0
+						},200);
+						if (window.console && console.log) {
+							// example return of current slide number
+							console.log('animationComplete on slide: ', current);
+						};
+					},
+					slidesLoaded: function() {
+						$('.caption').animate({
+							bottom:0
+						},200);
+					}
+				});
+			});
 	</script>
 	</head>
 	<body>
-		<div class = "container">
 		<%= render 'layouts/header'%>
-		
+		<%= render 'layouts/slides'%>
+		<div class="facebook">
+		<iframe src="http://www.facebook.com/plugins/like.php?href=www.indobruin.com"
+		        scrolling="no" frameborder="0"
+		        style="border:none; width:450px; height:80px"></iframe>
+		</div>
+			<div class="content">
+				<section>
 				<% flash.each do |key, value| %>
 					<div class="flash <%= key %>"><%= value %></div>
 					<%end%>
 				<%= yield %>
+				<div class="ifooter"><a href="http://richardweilung.com">&copy; Richard Lung 2011</div>
 				</section>
+					
+			</div>
+			
+			
 		
 		<%= debug(params) if Rails.env.development? %>
+		
+		
+		
+				
+		
 			
-			</div>
-			<div class="ifoot"><a href="http://richardweilung.com">&copy; Richard Lung 2011</div>
+			
+			
 	</body>
 </html>

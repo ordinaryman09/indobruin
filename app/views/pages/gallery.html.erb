@@ -1,10 +1,3 @@
-<!-- include CSS always before including js -->
-<%= stylesheet_link_tag 'tn3' , :media => 'screen' %>
-<!-- include jQuery library -->
-<%= javascript_include_tag "jquery.min" %>
-<!-- include tn3 plugin -->
-<%= javascript_include_tag "jquery.tn3lite.min" %>
-
 <script type="text/javascript">
         $(document).ready(function() { 
         $('.gallery').tn3({ 
@@ -12,7 +5,7 @@
          }); 
       });
 </script>
-
+<div class="igallery">
      <div class="gallery">
        <div class="tn3 album"> 
    
@@ -117,3 +110,4 @@
          </ul>
        </div>
     </div>
+</div>

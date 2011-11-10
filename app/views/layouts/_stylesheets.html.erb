@@ -2,5 +2,6 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %> <![endif]-->
-<%= stylesheet_link_tag 'bootstrap' , :media => 'screen' %>
+<%= stylesheet_link_tag 'screen.css', :media => 'screen, projection' %>
+<%= stylesheet_link_tag 'print.css', :media => 'print' %>
+<!--[if IE]><%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %><![endif]-->
